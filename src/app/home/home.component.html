@@ -1,0 +1,65 @@
+<div class="main-container">
+  <div class="nav">
+    <img src="../../assets/back_button.png" routerLink="/" >
+    <img src="../../assets/logo.png" routerLink="/cart">
+  </div>
+  <div class="scrollbar">
+    <div class="veg-pizza">
+      <a routerLink="/veg">
+        <img src="../../assets/scroll-pizza.png" >
+        <p><b>veg-pizza</b></p>
+      </a>
+    </div>
+    <div class="non-veg-pizza">
+      <a routerLink="/non-veg">
+        <img src="../../assets/scroll-pizza.png">
+        <p><b>non-veg pizza</b></p>
+      </a>
+    </div>
+    <div class="beverages">
+      <a routerLink="/beverages">
+        <img src="../../assets/scroll-drinks.png" alt="">
+        <p><b>beverages</b></p>
+      </a>
+    </div>
+  </div>
+  <div class="specials">
+    <h2>Today's special</h2>
+    <div class="pizza-special" *ngFor="let p of pizza">
+      <div class="data" >
+        <h3>{{p.item}}</h3>
+        <p>{{p.description}}</p>
+          <div class="details">
+            <button *ngIf="p.showbuttonPizza" class="main-button" (click)="toggleButtons('pizza',p)">Add</button>
+            <div *ngIf="!p.showbuttonPizza">
+              <button class="mini-btn" (click)="decrement(p)">-</button>
+              <span>{{p.qty}}</span>
+              <button class="mini-btn" (click)="increment(p)">+</button>
+            </div>
+            <p><b>price : {{p.cost | currency}}</b></p>
+          </div>
+      </div>
+      <div class="img">
+        <img src="{{p.image}}" >
+      </div>
+    </div>
+    <div class="beverage-special" *ngFor="let b of beverage">
+      <div class="data">
+        <h3>{{b.item}}</h3>
+        <p>{{b.description}}</p>
+          <div class="details">
+            <button *ngIf="b.showbuttonBeverage" class="main-button" (click)="toggleButtons('beverage', b)">Add</button>
+            <div *ngIf="!b.showbuttonBeverage">
+              <button class="mini-btn" (click)="decrement(b)">-</button>
+              <span>{{b.qty}}</span>
+              <button class="mini-btn" (click)="increment(b)">+</button>
+            </div>
+            <p><b>price : {{b.cost | currency}}</b></p>
+          </div>
+      </div>
+      <div class="img">
+        <img src="../../assets/coco_cola.png">
+      </div>
+    </div>
+  </div>
+</div>

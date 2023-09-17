@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div class="nav">
+    <img src="../../assets/back_button.png" routerLink="/home" >
+  </div>
+  <div class="cart" *ngFor="let p of cartItems">
+    <div class="data" >
+      <h3>Name: {{p.item}}</h3>
+      <p>Qty: {{p.qty}}</p>
+      <p>Price: {{p.qty * p.cost}}</p>
+      <br>
+      <button (click)="remove(p)">remove</button>
+    </div>
+    <div class="img">
+      <img src="{{p.image}}" >
+    </div>
+  </div>
+</div>

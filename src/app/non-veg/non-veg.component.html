@@ -1,0 +1,27 @@
+<div class="main-container">
+  <div class="nav">
+    <img src="../../assets/back_button.png" routerLink="/home" >
+    <img src="../../assets/logo.png" routerLink="/cart">
+  </div>
+  <div class="search">
+    <input type="text" [(ngModel)]="searchText" (input)="filterItems()" placeholder="Search here">
+  </div>
+  <div class="pizza-special" *ngFor="let v of filteredNonVeg">
+    <div class="data">
+      <h4>{{v.item}}</h4>
+      <p>{{v.description}}
+        </p>
+        <div class="details">
+          <button class="main-button" *ngIf="v.showbuttonPizza" class="main-button" (click)="toggleButtons(v)">Add</button>
+          <div *ngIf="!v.showbuttonPizza">
+            <button class="mini-btn" (click)="decrement(v)">-</button>
+            <span>{{v.qty}}</span>
+            <button class="mini-btn" (click)="increment(v)">+</button>
+          </div>
+          <p><b>price : {{v.cost | currency}}</b></p>
+        </div>
+    </div>
+    <div class="img">
+      <img src="{{v.image}}" >
+    </div>
+</div>

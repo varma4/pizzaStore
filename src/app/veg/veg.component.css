@@ -1,0 +1,112 @@
+.main-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.main-container .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+}
+
+.main-container .nav img {
+  width: 10%;
+  box-shadow: 3px 3px 3px 3px lightblue;
+  margin: 0% 5%;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.search{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.search input{
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  /* border: 0px; */
+  background: white;
+  outline: none;
+}
+
+.pizza-special{
+  height: 30vh;
+  box-shadow: 10px 10px 10px 10px lightblue;
+  border-radius: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2%;
+}
+
+.pizza-special .data{
+  width: 60%;
+}
+
+.pizza-special .data .details{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pizza-special .data .details .main-button{
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: lightblue;
+  padding: 2px;
+}
+
+.mini-btn{
+  width: 40px;
+}
+
+.pizza-special .img{
+  width: 20%;
+}
+
+.pizza-special .img img{
+  width: 100%;
+}
+
+@media (min-width: 800px) and (max-width: 1600px) {
+  .main-container {
+    width: 100%;
+    height: 90vh;
+  }
+  .main-container .nav{
+    width: 100%;
+    height: 10vh;
+  }
+  .main-container .nav img{
+    width: 3%;
+    margin: 0% 4%;
+  }
+  .pizza-special{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+  }
+  .pizza-special .img{
+    width: 20%;
+  }
+
+  .pizza-special .img img{
+    width: 60%;
+  }
+
+}
+

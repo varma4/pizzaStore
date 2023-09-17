@@ -1,0 +1,206 @@
+.main-container {
+  width: 100%;
+  height: 90vh;
+}
+
+.main-container .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  margin-top: 1vh;
+}
+
+.main-container .nav img {
+  width: 10%;
+  box-shadow: 3px 3px 3px 3px lightblue;
+  margin: 0% 5%;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.main-container .scrollbar {
+  margin-top: 1vh;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-container .scrollbar .veg-pizza,
+.main-container .scrollbar .non-veg-pizza,
+.main-container .scrollbar .beverages {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-container .scrollbar .veg-pizza a,
+.main-container .scrollbar .non-veg-pizza a,
+.main-container .scrollbar .beverages a{
+  text-decoration: none;
+  color: black;
+}
+
+.scrollbar img {
+  width: 20%;
+  /* height: 8vh; */
+  box-shadow: 3px 3px 3px 3px lightblue;
+  padding: 25px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.scrollbar p {
+  font-size: larger;
+}
+
+.specials{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 65vh;
+
+}
+.specials h2{
+  margin-left: 4%;
+}
+
+.specials .pizza-special{
+  width: 100%;
+  height: 25vh;
+  box-shadow: 10px 10px 10px 10px lightblue;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.specials .pizza-special{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.specials .pizza-special .data{
+  width: 60%;
+}
+
+.specials .pizza-special .data .details{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specials .pizza-special .data .details .main-button{
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: lightblue;
+  padding: 2px;
+}
+
+.specials .pizza-special .img{
+  width: 20%;
+}
+
+.specials .pizza-special .img img{
+  width: 100%;
+}
+
+/* ----------- */
+
+.specials .beverage-special{
+  width: 100%;
+  height: 25vh;
+  box-shadow: 10px 10px 10px 10px lightblue;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.specials .beverage-special{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.specials .beverage-special .data{
+  width: 60%;
+}
+
+.specials .beverage-special .data .details{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specials .beverage-special .data .details .main-button{
+  width: 70px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: lightblue;
+  padding: 2px;
+}
+
+.mini-btn{
+  width: 40px;
+}
+
+.specials .beverage-special .img{
+  width: 25%;
+}
+
+.specials .beverage-special .img img{
+  width: 100%;
+}
+
+@media (min-width: 800px) and (max-width: 1600px) {
+  .main-container {
+    width: 100%;
+    height: 90vh;
+  }
+  .main-container .nav{
+    width: 100%;
+    height: 10vh;
+  }
+  .main-container .nav img{
+    width: 3%;
+    margin: 0% 4%;
+  }
+  .main-container .scrollbar{
+    height: 30vh;
+  }
+  .scrollbar img{
+    width: 20%;
+    height: 15vh;
+  }
+  .specials{
+    height: 100vh;
+  }
+  .specials .pizza-special{
+    height: 40vh;
+  }
+  .specials .pizza-special .img{
+    width: 20%;
+  }
+  .specials .beverage-special{
+    height: 40vh;
+  }
+
+  .specials .beverage-special .img{
+    width: 20%;
+  }
+}
